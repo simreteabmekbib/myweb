@@ -1,0 +1,309 @@
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Serif', serif;
+            background: #fff;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            
+    
+        }
+        img{
+            height: 90vh;
+            margin-top: 1.5rem;
+            margin-left: 1px;
+            
+        }
+        .sidebar{
+            position: fixed;
+            top: 0;
+            left: -225px;
+            background: white;
+            width: 225px;
+            height: 100%;
+            transition: .3s;
+            padding-left: 15px;
+            padding-top: 3rem;
+        }
+        ul{
+            margin: 0;
+            padding: 20px 0;
+        }
+        ul li{
+            list-style: none;
+        }
+        ul li a{
+            padding-top: 0;
+            color: black;
+            display: block;
+            text-decoration: none;
+        }
+        .sidebarBtn{
+            position: absolute;
+            top: 0;
+            right: -50px;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            cursor: pointer;
+            background: #f5f5f5;
+            border: none;
+            outline: none;
+        }
+        .sidebarBtn span{
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: #262626;
+            position: absolute;
+            top: 24px;
+            transition: .3s;
+        }
+        .sidebarBtn span::before{
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #262626;
+            transition: .3s;
+        }
+        .sidebarBtn span:after{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #262626;
+            transition: .3s;
+        }
+        .active{
+            left: 0px;
+        }
+        .social_icons_wrap {
+            margin-right: 14px;
+            width: 180px;
+          }
+          
+          ul.social_icons {
+            float:left;
+            list-style-type:none;
+            padding: 0 0 0 1em;
+            display: none;
+            font-size: 14px;
+            width: 100%;
+          }
+          
+            ul.social_icons li.social_icon {
+              -webkit-transition: opacity 0.3s ease;
+              -moz-transition: opacity 0.3s ease;
+              -ms-transition: opacity 0.3s ease;
+              -o-transition: opacity 0.3s ease;
+              transition: opacity 0.3s ease;
+              -webkit-border-radius: 11px;
+              -moz-border-radius: 11px;
+              border-radius: 11px;
+              cursor: pointer;
+              *display:inline;
+              display: inline-block;
+              font-family: 'theme_social';
+              font-size: 12px;
+              line-height: 18px;
+              filter: alpha(opacity=60);
+              opacity: 0.6;
+              padding: 1px;
+              position: relative;
+              text-align: center;
+              width: 18px; height: 18px;
+              zoom: 1;
+            }
+          
+          
+          
+            ul.social_icons li.social_icon a {
+              display: block;
+              height: 20px;
+              overflow: hidden;
+              padding: 0;
+              filter: alpha(opacity=0);
+              opacity: 0;
+              width: 20px;
+              position: absolute; top: -1px; left: 0;
+          
+            }
+          
+          ul.social_icons  li.social_icon:hover {
+            filter: alpha(opacity=100);
+            opacity: 1;
+          }
+          
+          
+            ul.social_icons li.social_icon {
+              background: #000;
+            }
+            ul.social_icons li.social_icon:before {
+              color: #fff;
+            }
+            ul.social_icons li.social_icon a { color: #fff; }
+          
+          
+          /* Share button */
+          #share_button {
+            font-family: "Helvetica", "Arial", sans-serif;
+            display: inline-block;
+            *display: inline;
+            margin-left: 5px;
+            position: relative;
+            *right:0;
+            margin-top: 10vh;
+            /*top: 2px;*/
+          }
+          
+          #share_button a {
+            color: #ffffff;
+          background: #000000;
+            margin: 3px 3px 4px 0; /* was 0 3px 0 0 */
+            padding: 4px 11px;
+            position: relative;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1em;
+            letter-spacing: 0.04em;
+            top: 0;
+            text-decoration: none;
+          
+            border-radius: 16px;
+            -moz-border-radius: 16px;
+            -webkit-border-radius: 16px;
+          
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+          
+            -webkit-transition: opacity 0.3s ease;
+            -moz-transition: opacity 0.3s ease;
+            -ms-transition: opacity 0.3s ease;
+            -o-transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease;
+          
+            font-family: arial;
+            font-size: 11px;
+          }
+            #share_button a:hover,
+            #share_button a:focus {
+              filter: alpha(opacity=100);
+              opacity: 1;
+            }
+          @media only screen and (min-width: 992px){
+              button{
+                  visibility: hidden;
+              }
+              .sidebar{
+                  visibility: visible;
+                  left: 0;
+                  margin-left: 50px;
+              }
+              #main{
+                  margin-left: 275px;
+              }
+              #wid{
+                width: 5871px; 
+                overflow: hidden;
+              }
+          }
+          #position{
+              margin-top: 26vh;
+          }
+          @media only screen and (max-width: 992px){
+          #main{
+              margin-left: 65px;
+          } 
+          #wid{
+            width: 5871px; 
+            overflow: hidden;
+          }
+        }
+        @media only screen and (max-width: 576px){
+            #main{
+                margin-left: 0px;
+            } 
+            
+            #top_nav{
+                position: fixed;
+                background: white;
+                top: 0;
+                visibility: visible;
+                width: 100%;
+                left: 0;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .sidebarBtn{
+                top: 0;
+                right: 0;
+                float: right;
+
+            }
+            #top_nav a{
+                float: left;
+            }
+            body{
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            img{
+                width: 90vw;
+                margin-left: 2rem;
+            }
+            #main{
+                margin-top: 50px;
+            }
+            #wid{
+                width: 100%;
+                margin-bottom: 40px;
+              }
+            .padtop{
+              padding-top: 5rem;
+            }
+            
+          }
+          .social_icon #social{
+            width: 20px; 
+            height: 20px; 
+            border-radius: 20px; 
+            background-color: rgba(0,0,0,0.6); 
+            color: white; 
+            padding-top: 4px; 
+            font-size: 12px;
+}
+.social_icon a{
+  text-decoration: none;
+}
+#share{
+  height: 18px; 
+  border-radius: 15px; 
+  background-color: rgba(0,0,0,0.6); 
+  color: white; 
+  font-size: 12px;
+  padding: 3px 12px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.social_icon{
+  margin-top: 41.5vh;
+}
+.social_icon a #social:hover{
+    background-color: black;
+}
+.social_icon #share:hover{
+    background-color: black;
+    
+}
+#hov-red:hover{
+    text-decoration-color: red;
+    color: red;
+}
+#hov-red{
+  color: black;
+}
